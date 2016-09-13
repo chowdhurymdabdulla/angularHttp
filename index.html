@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Angular Application</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+</head>
+
+<body>
+    <div ng-controller="UserController as user">
+        <form ng-submit="user.getUser();">
+            <p>Enter an user id!</p>
+            <input type="text" placeholder="Enter an user id" ng-model="user.userId">
+            <button type="submit">
+                Search
+            </button>
+            <p>{{ user.chosenUser}}</p>
+        </form>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/MainController.js"></script>
+</body>
+
+</html>
